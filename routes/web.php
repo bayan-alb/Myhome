@@ -28,6 +28,8 @@ Route::get('/categories/create', 'CategoriesController@create')->name('create-ca
 Route::post('/categories/create', 'CategoriesController@store')->name('store-category');
 Route::get('/categories', 'CategoriesController@index')->name('index-categories');
 Route::get('/categories/edit/{id}', 'CategoriesController@edit')->name('edit-category');
+Route::post('/categories/edit/{id}', 'CategoriesController@update')->name('update-category');
+Route::get('/categories/delete/{id}', 'CategoriesController@delete')->name('delete-category');
 
 
 
