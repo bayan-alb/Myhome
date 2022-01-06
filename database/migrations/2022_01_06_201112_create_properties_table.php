@@ -17,13 +17,12 @@ class CreatePropertiesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->text('description')->nullable();
-            $table->number('baths')->nullable();
-            $table->number('rooms')->nullable();
+            $table->string('baths')->nullable();
+            $table->string('rooms')->nullable();
             $table->double('price');
             $table->enum('type' , ["Apartment" , "House" , "Villa"])->default('Apartment');          
             $table->double('space')->nullable();
             $table->string('image')->nullable();
-            $table->boolean('is_delivery')->default('0');
 
              $table->bigInteger('category_id')->unsigned();
 
